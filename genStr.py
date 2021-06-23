@@ -148,7 +148,7 @@ I will give you `STRING_SESSION` for your UserBot.
 It needs `API_ID`, `API_HASH`, Phone Number and One Time Verification Code. \
 Which will be sent to your Phone Number.
 You have to put **OTP** in `1 2 3 4 5` this format. __(Space between each numbers!)__
-**NOTE:** If bot not Sending OTP to your Phone Number than send /restart Command and again send /start to Start your Process. 
+**NOTE:** If bot not Sending OTP to your Phone Number than send /restart Command and again send /gensession to Start your Process. 
 Must Join Channel for Bot Updates !!
 """
     reply_markup = InlineKeyboardMarkup(
