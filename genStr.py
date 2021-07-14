@@ -13,8 +13,8 @@ from pyrogram.errors import (
 )
 
 API_TEXT = """Hi, {}. 😉
-✨This is Pyrogram's String Session Generator Bot By Tiana. I will generate Pyrogram String Session of your Telegram Account.✨
-👉 By @PRINCE_3011💗🔥
+✨This is Pyrogram's String Session Generator Bot By DEVIL 👿. I will generate Pyrogram String Session of your Telegram Account.✨
+👉 Maintain By @DEVILSDAD_PRINCE💗🔥
 Now send your `API_ID` to Start Generating Session."""
 HASH_TEXT = "Now send your `API_HASH`.\n\nPress /cancel to Cancel Task."
 PHONE_NUMBER_TEXT = (
@@ -34,7 +34,7 @@ async def genStr(_, msg: Message):
     try:
         check_api = int(api.text)
     except Exception:
-        await msg.reply("`API_ID` is Invalid.\nPress /start to Start again.")
+        await msg.reply("`API_ID` is Invalid.\nPress /genstr to Start again.")
         return
     api_id = api.text
     hash = await bot.ask(chat.id, HASH_TEXT)
@@ -59,7 +59,7 @@ async def genStr(_, msg: Message):
     try:
         client = Client("my_account", api_id=api_id, api_hash=api_hash)
     except Exception as e:
-        await bot.send_message(chat.id ,f"**ERROR:** `{str(e)}`\nPress /start to Start again.")
+        await bot.send_message(chat.id ,f"**ERROR:** `{str(e)}`\nPress /genstr to Start again.")
         return
     try:
         await client.connect()
@@ -122,7 +122,7 @@ async def genStr(_, msg: Message):
         return
     try:
         session_string = await client.export_session_string()
-        await client.send_message("me", f"#PYROGRAM #STRING_SESSION\n\n```{session_string}``` \n\nBy [@TIANA_PRINCE_BOT](tg://openmessage?user_id=1472531255) \nA Bot By @PRINCE_3011 \nThanks for using our bot 👉✨")
+        await client.send_message("me", f"#PYROGRAM #STRING_SESSION\n\n```{session_string}``` \n\nBy [@DEVIL_PRINCE_BOT](tg://openmessage?user_id=1472531255) \nA Bot By @DEVILDAD_PRINCE \nThanks for using our bot 👉✨")
         await client.disconnect()
         text = "String Session is Successfully Generated.\nClick on Below Button."
         reply_markup = InlineKeyboardMarkup(
@@ -148,13 +148,13 @@ I will give you `STRING_SESSION` for your UserBot.
 It needs `API_ID`, `API_HASH`, Phone Number and One Time Verification Code. \
 Which will be sent to your Phone Number.
 You have to put **OTP** in `1 2 3 4 5` this format. __(Space between each numbers!)__
-**NOTE:** If bot not Sending OTP to your Phone Number than send /restart Command and again send /gensession to Start your Process. 
+**NOTE:** If bot not Sending OTP to your Phone Number than send /restart Command and again send /genstr to Start your Process. 
 Must Join Channel for Bot Updates !!
 """
     reply_markup = InlineKeyboardMarkup(
         [
             [
-                InlineKeyboardButton('Developer', url='https://t.me/PRINCE_3011')
+                InlineKeyboardButton('Developer', url='https://t.me/devildad_prince')
             ],
             [
                 InlineKeyboardButton('SUPPORT GROUP', url='https://t.me/princebotsupport'),
